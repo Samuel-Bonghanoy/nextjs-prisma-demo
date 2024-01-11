@@ -20,7 +20,7 @@ export default async function Home() {
 
   return (
     <div className="flex mx-auto w-full h-full items-center justify-center">
-      <Task Task={task} />
+      <Task Task={task as TaskType} />
     </div>
   );
 }
