@@ -6,12 +6,13 @@ interface TaskProps {
 }
 
 export default function Task({ Task }: TaskProps) {
+  console.log(Task);
+
   return (
-    <div className="stats shadow">
+    <div className="stats shadow bg-slate-500 text-black">
       <div className="stat">
-        <div className="stat-title">Total Page Views</div>
-        <div className="stat-value">89,400</div>
-        <div className="stat-desc">21% more than last month</div>
+        <div className="stat-title text-black">{Task.title}</div>
+        <div className="stat-desc text-black">{Task.content}</div>
       </div>
     </div>
   );
