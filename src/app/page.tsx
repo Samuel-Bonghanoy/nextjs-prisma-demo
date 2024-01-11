@@ -4,23 +4,13 @@ import { db } from "@/db";
 import { TaskType } from "@/types/task";
 
 export default async function Home() {
-  async function createTask() {
-    "use server";
-    const task = await db.task.create({
-      data: {
-        title: "Do this shit",
-        content: "Do that shit",
-      },
-    });
-    console.log(task);
-  }
-
-  const task = await db.task.findFirst();
-  console.log(task);
+  const tasks = await db.task.findMany();
 
   return (
-    <div className="flex mx-auto w-full h-full items-center justify-center">
-      <Task Task={task as TaskType} />
+    <div className="flex flex-col gap-5 mx-auto w-full h-full items-center justify-center">
+      {tasks.map((task) => (
+        <Task Task={task as TaskType} key={task.id} />
+      ))}
     </div>
   );
 }
