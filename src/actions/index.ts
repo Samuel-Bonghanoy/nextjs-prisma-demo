@@ -1,6 +1,7 @@
 "use server";
 
 import { db } from "@/db";
+import { redirect } from "next/navigation";
 
 export async function createTask(title: string, content: string) {
   "use server";
@@ -19,4 +20,5 @@ export async function deleteTask(id: number) {
       id,
     },
   });
+  redirect("/");
 }
