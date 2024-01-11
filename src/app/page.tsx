@@ -59,7 +59,7 @@ export default async function Home() {
           </button>
         </div>
       </form>
-      );
+
       <div className="flex flex-col gap-5 mx-auto w-full h-full items-center ">
         {tasks.map((task) => (
           <Task Task={task as TaskType} key={task.id} />
