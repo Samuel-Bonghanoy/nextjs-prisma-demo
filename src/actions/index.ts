@@ -20,5 +20,4 @@ export async function deleteTask(id: number) {
       id,
     },
   });
-  redirect("/");
 }

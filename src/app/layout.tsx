@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   title: "Todo List",
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: {
   children: React.ReactNode;
