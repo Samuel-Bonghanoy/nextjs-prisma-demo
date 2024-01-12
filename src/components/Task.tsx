@@ -22,7 +22,7 @@ export default function Task({ Task }: TaskProps) {
         </button>
       </form>
       <div className="stat">
-        <div className="stat-title text-black">{title}</div>
+        <div className="stat-title text-black s">{title}</div>
         <div className="stat-desc text-black">{content}</div>
       </div>
     </div>
