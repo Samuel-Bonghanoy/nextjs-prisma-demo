@@ -15,7 +15,7 @@ export default async function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className + " h-screen s"}>{children}</body>
+      <body className={inter.className + " h-screen sm"}>{children}</body>
     </html>
   );
 }
